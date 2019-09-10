@@ -7,4 +7,14 @@
   color: white;
   display: flex;
   justify-content: space-around;
+  align-content: space-around;
+}
+
+.user-rating {
+  background: rgb(135, 162, 250);
+  color: black;
+}
+
+.answerbox {
+  width:100px;
 }
