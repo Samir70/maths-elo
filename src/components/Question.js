@@ -22,7 +22,7 @@ const Question = ({ quAndA, userAnswer, wrongAnswers, UpdateUserAnswer, UserIsCo
         <div>
             <h2>{quAndA.q}</h2>
             <form onSubmit={submitHandler}>
-                <input classname="answerbox"
+                <input className="answerbox"
                     type="text"
                     name="answerbox"
                     value={userAnswer}
