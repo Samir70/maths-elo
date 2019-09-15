@@ -2,6 +2,12 @@ const conversionPairs = [
     {large:['metres', 'm'], small:['centimetres', 'cm'], ratio:100},
     {large:['metres', 'm'], small:['millimetres', 'mm'], ratio:1000},
     {large:['kilometres', 'Km'], small:['metres', 'm'], ratio:1000},
+
+    {large:['grams', 'g'], small:['milligrams', 'mg'], ratio:1000},
+    {large:['kilograms', 'Kg'], small:['grams', 'g'], ratio:1000},
+
+    {large:['litres', 'L'], small:['centilitres', 'cL'], ratio:100},
+    {large:['litres', 'L'], small:['millimetres', 'mL'], ratio:1000},
 ]
 
 const MetricConversionQ = () => {
