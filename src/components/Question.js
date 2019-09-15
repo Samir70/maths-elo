@@ -1,15 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { UpdateUserAnswer, UserIsCorrect, UserIsWrong } from '../Reducers/actions'
+import { UpdateUserAnswer, UserIsCorrect, UserIsWrong } from '../Reducers/actions';
+import GetNewQ from '../NewQs/GetNewQ';
 
 const Question = ({ quAndA, userAnswer, wrongAnswers, UpdateUserAnswer, UserIsCorrect, UserIsWrong }) => {
     const changeHandler = (e) => {
+        // make sure 1.70 is treate as 1.7
+        
         UpdateUserAnswer(e.target.value)
     }
     const submitHandler = (e) => {
         e.preventDefault();
         if (userAnswer === quAndA.a) { 
-            UserIsCorrect(2000, {q:'Think of a new number!', a:'41'})
+            const newQ = GetNewQ();
+            UserIsCorrect(2000, newQ)
         } else {
             UserIsWrong(1000, userAnswer)
         }
