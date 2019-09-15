@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/maths-elo/static/css/main.8660db44.chunk.css",
+    "main.js": "/maths-elo/static/js/main.ac75f8e1.chunk.js",
+    "main.js.map": "/maths-elo/static/js/main.ac75f8e1.chunk.js.map",
+    "runtime~main.js": "/maths-elo/static/js/runtime~main.865c917a.js",
+    "runtime~main.js.map": "/maths-elo/static/js/runtime~main.865c917a.js.map",
+    "static/js/2.7cc10581.chunk.js": "/maths-elo/static/js/2.7cc10581.chunk.js",
+    "static/js/2.7cc10581.chunk.js.map": "/maths-elo/static/js/2.7cc10581.chunk.js.map",
+    "index.html": "/maths-elo/index.html",
+    "precache-manifest.4036ce9d6068d6c977665b27bf6e3dd5.js": "/maths-elo/precache-manifest.4036ce9d6068d6c977665b27bf6e3dd5.js",
+    "service-worker.js": "/maths-elo/service-worker.js",
+    "static/css/main.8660db44.chunk.css.map": "/maths-elo/static/css/main.8660db44.chunk.css.map"
+  }
+}
