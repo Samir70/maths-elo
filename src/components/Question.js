@@ -5,13 +5,13 @@ import GetNewQ from '../NewQs/GetNewQ';
 
 const Question = ({ quAndA, userAnswer, wrongAnswers, UpdateUserAnswer, UserIsCorrect, UserIsWrong }) => {
     const changeHandler = (e) => {
-        // make sure 1.70 is treate as 1.7
-        
-        UpdateUserAnswer(e.target.value)
+        UpdateUserAnswer(e.target.value);
     }
     const submitHandler = (e) => {
         e.preventDefault();
-        if (userAnswer === quAndA.a) { 
+        // allow answer like 1.70 when the required answer is 1.7
+        // but take care if questions types are included that need a string as an answer
+        if (Number(userAnswer) === Number(quAndA.a)) { 
             const newQ = GetNewQ();
             UserIsCorrect(2000, newQ)
         } else {
