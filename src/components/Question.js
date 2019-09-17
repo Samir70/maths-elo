@@ -2,8 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { UpdateUserAnswer, UserIsCorrect, UserIsWrong } from '../Reducers/actions';
 import GetNewQ from '../NewQs/GetNewQ';
+import NewRatings from '../Ratings/Ratings';
 
-const Question = ({ quAndA, userAnswer, wrongAnswers, UpdateUserAnswer, UserIsCorrect, UserIsWrong }) => {
+const Question = ({ quAndA, userAnswer, userRating, wrongAnswers, UpdateUserAnswer, UserIsCorrect, UserIsWrong }) => {
     const changeHandler = (e) => {
         UpdateUserAnswer(e.target.value);
     }
@@ -13,9 +14,11 @@ const Question = ({ quAndA, userAnswer, wrongAnswers, UpdateUserAnswer, UserIsCo
         // but take care if questions types are included that need a string as an answer
         if (Number(userAnswer) === Number(quAndA.a)) { 
             const newQ = GetNewQ();
-            UserIsCorrect(2000, newQ)
+            var newR = NewRatings(userRating, 1500, 1, 1)[0]
+            UserIsCorrect(newR, newQ)
         } else {
-            UserIsWrong(1000, userAnswer)
+            newR = NewRatings(userRating, 1500, 0, 1)[0]
+            UserIsWrong(newR, userAnswer)
         }
     }
 
@@ -41,7 +44,8 @@ const mapStateToProps = (state) => {
     return {
         quAndA: state.quAndA,
         wrongAnswers: state.wrongAnswers,
-        userAnswer: state.userAnswer
+        userAnswer: state.userAnswer,
+        userRating: state.userRating
     }
 }
 
