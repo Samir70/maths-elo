@@ -1,2 +1,2 @@
 export const metricConversion = 'metricConversion';
-export const gridMethod = 'gridMethod';
+export const MultiplyNumbers = 'gridMethod';

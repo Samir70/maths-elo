@@ -4,7 +4,9 @@ import { UpdateUserAnswer, UserIsCorrect, UserIsWrong } from '../Reducers/action
 import GetNewQ from '../NewQs/GetNewQ';
 import NewRatings from '../Ratings/Ratings';
 
-const Question = ({ quAndA, userAnswer, userRating, wrongAnswers, UpdateUserAnswer, UserIsCorrect, UserIsWrong }) => {
+const Question = ({ 
+            quAndA, userAnswer, userRating, wrongAnswers, 
+            UpdateUserAnswer, UserIsCorrect, UserIsWrong }) => {
     const changeHandler = (e) => {
         UpdateUserAnswer(e.target.value);
     }
