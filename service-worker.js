@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/maths-elo/precache-manifest.4036ce9d6068d6c977665b27bf6e3dd5.js"
+  "/maths-elo/precache-manifest.718ce98c7ef53f236715a068a7a35927.js"
 );
 
 self.addEventListener('message', (event) => {
