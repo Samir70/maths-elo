@@ -1,5 +1,5 @@
 import MetricConversionQ from './MetricConversion';
-import { MultiplyNumberQ } from './MultiplyNumbers';
+import { MultiplyNumberQ } from './NumberOperations';
 import { metricConversion, MultiplyNumbers } from './QTypes';
 
 const GetNewQ = (types = [metricConversion, MultiplyNumbers]) => {
