@@ -2,7 +2,7 @@ import { UPDATE_USER_ANSWER, USER_IS_CORRECT, USER_IS_WRONG } from './actions'
 
 const initialState = {
     userRating: 1500,
-    quAndA: {q: 'Think of a number', a: '42'},
+    quAndA: {q: 'Think of a number', a: '42', QType:''},
     userAnswer: '',
     wrongAnswers: []
 }

@@ -15,7 +15,7 @@ const Question = ({
         // allow answer like 1.70 when the required answer is 1.7
         // but take care if questions types are included that need a string as an answer
         if (Number(userAnswer) === Number(quAndA.a)) { 
-            const newQ = GetNewQ();
+            const newQ = GetNewQ('', '');
             var newR = NewRatings(userRating, 1500, 1, 1)[0]
             UserIsCorrect(newR, newQ)
         } else {
@@ -38,6 +38,7 @@ const Question = ({
                     onChange={changeHandler} />
             </form>
             {wrongAnswerList}
+            <p>QType: {quAndA.QType}</p>
         </div>
     )
 }
