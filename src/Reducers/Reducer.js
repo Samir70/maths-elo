@@ -1,10 +1,11 @@
-import { UPDATE_USER_ANSWER, USER_IS_CORRECT, USER_IS_WRONG } from './actions'
+import { UPDATE_USER_ANSWER, USER_IS_CORRECT, USER_IS_WRONG, TOGGLE_CLASS } from './actions'
 
 const initialState = {
     userRating: 1500,
     quAndA: {q: 'Think of a number', a: '42', QType:''},
     userAnswer: '',
-    wrongAnswers: []
+    wrongAnswers: [], 
+    showClassRoom: false
 }
 
 const reducer = (state = initialState, action) => {
@@ -21,6 +22,7 @@ const reducer = (state = initialState, action) => {
             userAnswer: ''
         }
         case UPDATE_USER_ANSWER : return {...state, userAnswer:action.payload}
+        case TOGGLE_CLASS : return {...state, showClassRoom:!state.showClassRoom}
         default : return state;
     } 
 }

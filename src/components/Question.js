@@ -38,7 +38,6 @@ const Question = ({
                     onChange={changeHandler} />
             </form>
             {wrongAnswerList}
-            <p>QType: {quAndA.QType}</p>
         </div>
     )
 }

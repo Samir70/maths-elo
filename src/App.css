@@ -10,6 +10,15 @@
   align-content: space-around;
 }
 
+.toggleClass-btn {
+  background: lightskyblue;
+  color: black;
+}
+
+.toggleClass-btn:hover {
+  background: lightgreen;
+}
+
 .user-rating {
   background: rgb(135, 162, 250);
   color: black;
