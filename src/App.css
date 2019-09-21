@@ -27,3 +27,23 @@
 .answerbox {
   width:100px;
 }
+
+.quandaBlock-odd {
+  background: lightgreen;
+  display: flex;
+  justify-content: space-around;
+}
+.quandaBlock-even {
+  background: lightseagreen;
+  display: flex;
+  justify-content: space-around;
+}
+
+.qBlock {
+  width: 70vw;
+}
+
+.aBlock {
+  width: 25vw;
+  color: red;
+}

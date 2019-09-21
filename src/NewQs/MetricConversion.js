@@ -1,6 +1,7 @@
 import { metricConversion } from './QTypes';
 
 const conversionPairs = [
+  'zeroQ',
     {large:['metres', 'm'], small:['centimetres', 'cm'], ratio:100},
     {large:['metres', 'm'], small:['millimetres', 'mm'], ratio:1000},
     {large:['kilometres', 'Km'], small:['metres', 'm'], ratio:1000},
@@ -13,7 +14,7 @@ const conversionPairs = [
 ]
 
 const MetricConversionQ = (subQType) => {
-    var Qtype = Number(subQType) || Math.floor(Math.random()*conversionPairs.length);
+    var Qtype = Number(subQType) || Math.floor(Math.random()*(conversionPairs.length-1))+1;
     console.log(metricConversion+'-'+Qtype);
     var convFacts = conversionPairs[Qtype];
     let forward = Math.random() < 0.5 ? true : false,

@@ -1,6 +1,7 @@
 import { MultiplyNumbers } from './QTypes';
 
 const subQTypes = [
+    'zeroQ',
     'sq', 'cube', 
     //'twos', 'threes', 'fours', 'fives', 'sixes', 'sevens', 'eights', 'nines', 'tens',
     'sqEnd5', 'sqEnd1',
@@ -8,7 +9,7 @@ const subQTypes = [
 ]
 
 export const MultiplyNumberQ = (subQType) => {
-    var type = Number(subQType) || Math.floor(Math.random()*subQTypes.length);
+    var type = Number(subQType) || Math.floor(Math.random()*(subQTypes.length-1))+1;
     console.log(MultiplyNumbers+'-'+type)
     var a = Math.ceil(Math.random()*9)+1, 
         b = Math.ceil(Math.random()*9)+1,

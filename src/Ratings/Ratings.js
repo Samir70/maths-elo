@@ -10,7 +10,7 @@ const NewRatings = (rating1, rating2, result, howProvisional) => {
     // expected result for each player
     var ratingSum = r1+r2;
     var e1=r1/ratingSum, e2=r2/ratingSum;
-    console.log('r1, e1', r1, e1)
+    // console.log('r1, e1', r1, e1)
 
     var newR1 = rating1 + 32*howProvisional*(result - e1),
         newR2 = rating2 + (32/howProvisional)*(1-result - e2);
