@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/maths-elo/static/css/main.8660db44.chunk.css",
-    "main.js": "/maths-elo/static/js/main.6f84e997.chunk.js",
-    "main.js.map": "/maths-elo/static/js/main.6f84e997.chunk.js.map",
+    "main.css": "/maths-elo/static/css/main.82007954.chunk.css",
+    "main.js": "/maths-elo/static/js/main.19fb3ab2.chunk.js",
+    "main.js.map": "/maths-elo/static/js/main.19fb3ab2.chunk.js.map",
     "runtime~main.js": "/maths-elo/static/js/runtime~main.865c917a.js",
     "runtime~main.js.map": "/maths-elo/static/js/runtime~main.865c917a.js.map",
-    "static/js/2.7cc10581.chunk.js": "/maths-elo/static/js/2.7cc10581.chunk.js",
-    "static/js/2.7cc10581.chunk.js.map": "/maths-elo/static/js/2.7cc10581.chunk.js.map",
+    "static/js/2.a13d1125.chunk.js": "/maths-elo/static/js/2.a13d1125.chunk.js",
+    "static/js/2.a13d1125.chunk.js.map": "/maths-elo/static/js/2.a13d1125.chunk.js.map",
     "index.html": "/maths-elo/index.html",
-    "precache-manifest.718ce98c7ef53f236715a068a7a35927.js": "/maths-elo/precache-manifest.718ce98c7ef53f236715a068a7a35927.js",
+    "precache-manifest.8316c5452d7e3bebd840759b8058e4da.js": "/maths-elo/precache-manifest.8316c5452d7e3bebd840759b8058e4da.js",
     "service-worker.js": "/maths-elo/service-worker.js",
-    "static/css/main.8660db44.chunk.css.map": "/maths-elo/static/css/main.8660db44.chunk.css.map"
+    "static/css/main.82007954.chunk.css.map": "/maths-elo/static/css/main.82007954.chunk.css.map"
   }
 }
