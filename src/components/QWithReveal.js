@@ -1,13 +1,24 @@
 import React from 'react';
 
-const QWithReveal = ({q, a, rowType}) => {
-    var quandaClass = Number(rowType) % 2 ? "quandaBlock-odd" : "quandaBlock-even";
-    return (
-        <div className={quandaClass}>
-            <h2 className="qBlock">{q}</h2>
-            <h2 className="aBlock">{a}</h2>
-        </div>
-    )
+class QWithReveal extends React.Component {
+    state = {showAnswer: false}
+    quandaClass = Number(this.props.rowType) % 2 ? "quandaBlock-odd" : "quandaBlock-even";
+    
+    
+    handleClick = () => {
+        this.setState({showAnswer:!this.state.showAnswer})
+    }
+    RevealButton = <button className="revealBtn" onClick={this.handleClick}>Show answer</button>
+    Answer = <h2 className="aBlock" onClick={this.handleClick} >{this.props.a}</h2>; 
+
+    render() {
+        return (
+            <div className={this.quandaClass}>
+                <h2 className="qBlock">{this.props.q}</h2>
+                {this.state.showAnswer ? this.Answer : this.RevealButton}
+            </div>
+        )
+    }
 }
 
 export default QWithReveal;

@@ -47,3 +47,9 @@
   width: 25vw;
   color: red;
 }
+
+.revealBtn {
+  width: 25vw;
+  color: green;
+  font-size: 2em;
+}
