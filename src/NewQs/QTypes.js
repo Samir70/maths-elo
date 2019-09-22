@@ -1,6 +1,7 @@
 export const metricConversion = 'metricConversion';
 export const TimeConversion = 'TimeConversion';
 export const MultiplyNumbers = 'MultiplyNumbers';
+export const Vocab = 'Vocab';
 
 // Aiming for QCodes which the app can parse to produce a new question of the same type
 // but with different numbers.

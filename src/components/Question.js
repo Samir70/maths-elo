@@ -16,7 +16,10 @@ const Question = ({
         // converting to Number will do this
         // but take care if questions types are included that need a string as an answer
         switch (quAndA.answerFormat) {
-            case 'string' : {var userIsCorrect = userAnswer === quAndA.a; break}
+            case 'string' : {
+                var userIsCorrect = userAnswer.toLowerCase() === quAndA.a.toLowerCase(); 
+                break
+            }
             default: userIsCorrect = Number(userAnswer) === Number(quAndA.a)
         }
         if (userIsCorrect) { 
