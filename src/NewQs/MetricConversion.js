@@ -15,7 +15,7 @@ const conversionPairs = [
 
 const MetricConversionQ = (subQType) => {
     var Qtype = Number(subQType) || Math.floor(Math.random()*(conversionPairs.length-1))+1;
-    console.log(metricConversion+'-'+Qtype);
+    //console.log(metricConversion+'-'+Qtype);
     var convFacts = conversionPairs[Qtype];
     let forward = Math.random() < 0.5 ? true : false,
         extraLarge = Math.random() < 0.25 ? 1 : Math.random() < 0.8 ? 10 : 100;

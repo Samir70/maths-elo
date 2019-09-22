@@ -1,8 +1,10 @@
-import { UPDATE_USER_ANSWER, USER_IS_CORRECT, USER_IS_WRONG, TOGGLE_CLASS } from './actions'
+import { UPDATE_USER_ANSWER, USER_IS_CORRECT, USER_IS_WRONG, TOGGLE_CLASS } from './actions';
+import GetNewQ from '../NewQs/GetNewQ';
 
+const newQ = GetNewQ('TimeConversion', '2')
 const initialState = {
     userRating: 1500,
-    quAndA: {q: 'Think of a number', a: '42', QType:''},
+    quAndA: newQ,
     userAnswer: '',
     wrongAnswers: [], 
     showClassRoom: false

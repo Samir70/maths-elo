@@ -13,8 +13,13 @@ const Question = ({
     const submitHandler = (e) => {
         e.preventDefault();
         // allow answer like 1.70 when the required answer is 1.7
+        // converting to Number will do this
         // but take care if questions types are included that need a string as an answer
-        if (Number(userAnswer) === Number(quAndA.a)) { 
+        switch (quAndA.answerFormat) {
+            case 'string' : {var userIsCorrect = userAnswer === quAndA.a; break}
+            default: userIsCorrect = Number(userAnswer) === Number(quAndA.a)
+        }
+        if (userIsCorrect) { 
             const newQ = GetNewQ('', '');
             var newR = NewRatings(userRating, 1500, 1, 1)[0]
             UserIsCorrect(newR, newQ)
