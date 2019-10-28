@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import axios from 'axios';
 import { UpdateUserAnswer, UserIsCorrect, UserIsWrong } from '../Reducers/actions';
 import GetNewQ from '../NewQs/GetNewQ';
 import NewRatings from '../Ratings/Ratings';
@@ -24,12 +25,19 @@ const Question = ({
         }
         if (userIsCorrect) { 
             const newQ = GetNewQ('', '');
-            var newR = NewRatings(userRating, 1500, 1, 1)[0]
-            UserIsCorrect(newR, newQ)
+            var newR = NewRatings(userRating, 1500, 1, 1)[0];
+            UserIsCorrect(newR, newQ);
         } else {
             newR = NewRatings(userRating, 1500, 0, 1)[0]
             UserIsWrong(newR, userAnswer)
         }
+        const toPost = {
+            category: quAndA.QType,
+            rating: newR
+        }
+        axios.post('/qratings/new-data', toPost)
+          .then(res => console.log(res))
+          .catch(err => console.log(err));
     }
 
     const wrongAnswerList = wrongAnswers.map((x, i) => 
