@@ -11,8 +11,9 @@ export const UserIsCorrect = (newUserRating, newQuAndA) => {
     return { type:USER_IS_CORRECT, userRating: newUserRating, quAndA: newQuAndA }
 }
 
-export const UserIsWrong = (newUserRating, userAnswer) => {
-    return { type:USER_IS_WRONG, userRating: newUserRating, wrongAnswer:userAnswer }
+export const UserIsWrong = (newUserRating, userAnswer, newQuAndARating) => {
+    return { type:USER_IS_WRONG, userRating: newUserRating, 
+        wrongAnswer:userAnswer, newQuAndARating:newQuAndARating }
 }
 
 export const ToggleClass = () => {

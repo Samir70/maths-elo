@@ -1,7 +1,8 @@
 import { UPDATE_USER_ANSWER, USER_IS_CORRECT, USER_IS_WRONG, TOGGLE_CLASS } from './actions';
 import GetNewQ from '../NewQs/GetNewQ';
 
-const newQ = GetNewQ('Vocab', '')
+const newQ = GetNewQ('Vocab', '');
+newQ.QRating = 1500;
 const initialState = {
     userRating: 1500,
     quAndA: newQ,
@@ -21,7 +22,8 @@ const reducer = (state = initialState, action) => {
             ...state,
             userRating: action.userRating,
             wrongAnswers:[...state.wrongAnswers, action.wrongAnswer],
-            userAnswer: ''
+            userAnswer: '',
+            quAndA: {...state.quAndA, QRating: action.newQuAndARating}
         }
         case UPDATE_USER_ANSWER : return {...state, userAnswer:action.payload}
         case TOGGLE_CLASS : return {...state, showClassRoom:!state.showClassRoom}

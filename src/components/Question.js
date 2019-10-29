@@ -25,15 +25,24 @@ const Question = ({
         }
         if (userIsCorrect) { 
             const newQ = GetNewQ('', '');
-            var newR = NewRatings(userRating, 1500, 1, 1)[0];
-            UserIsCorrect(newR, newQ);
+            var [newUserRating, newQuAndARating] = NewRatings(userRating, quAndA.QRating||1500, 1, 1);
+            //console.log('QType, QRating, old, new:', quAndA.QType, quAndA.QRating, newQuAndARating);
+            const toGet = {qType : newQ.QType};
+            axios.get('/qratings/get1rating', {params:toGet})
+            .then(res => {
+                console.log(res.data);
+                newQ.QRating = res.data.rating;
+                UserIsCorrect(newUserRating, newQ);
+            })
+            .catch(err => console.log(err))
         } else {
-            newR = NewRatings(userRating, 1500, 0, 1)[0]
-            UserIsWrong(newR, userAnswer)
+            [newUserRating, newQuAndARating] = NewRatings(userRating, 1500, 0, 1);
+            //console.log('QType, QRating, old, new:', quAndA.QType, quAndA.QRating, newQuAndARating);
+            UserIsWrong(newUserRating, userAnswer, newQuAndARating)
         }
         const toPost = {
             category: quAndA.QType,
-            rating: newR
+            ratingValue: newQuAndARating
         }
         axios.post('/qratings/new-data', toPost)
           .then(res => console.log(res))
@@ -54,6 +63,7 @@ const Question = ({
                     onChange={changeHandler} />
             </form>
             {wrongAnswerList}
+            <p>the question has a rating of {quAndA.QRating}</p>
         </div>
     )
 }
