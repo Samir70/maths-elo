@@ -1,3 +1,5 @@
+note: I have chosen to continue this project from its [api repo](https://github.com/Samir70/maths-elo-api). If I had known better, I would have started things that way. Version connect to backend is hosted on Heroku. See above repo for details and current limitations.
+
 # Maths Review
 The general aim for this is to have the computer ask maths questions on a variety of topics. Each question will have a rating (kind of like a chess ELO). So will the user. These ratings will change in the same way as ratings change when chess players win or lose a game of change. Generally: a strong user answering a weak question will result in hardly any change. But a weak user answering a hard question will lower the rating of the question and raise the rating of the user -- by quite a bit.
 
